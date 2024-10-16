@@ -6,8 +6,8 @@ function transformerListeEnObjet(jsonArray) {
     jsonArray.forEach(item => {
         // Utiliser une clé unique, ici 'id', pour chaque objet
         jsonObject[item.id] = {
-            nom: item.nom,
-            age: item.age
+            title: item.title,
+            calories: item.calories
         };
     });
 
