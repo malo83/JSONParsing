@@ -1,16 +1,9 @@
-// Exemple d'entrée JSON sous forme de liste (tableau)
-const jsonArray = [
-    { "id": 1, "nom": "Alice", "age": 25 },
-    { "id": 2, "nom": "Bob", "age": 30 },
-    { "id": 3, "nom": "Charlie", "age": 35 }
-];
-
-// Fonction pour transformer la liste en objet JSON simple
-function transformerListeEnObjet(liste) {
+// Fonction pour transformer une liste JSON en un objet JSON simple
+function transformerListeEnObjet(jsonArray) {
     const jsonObject = {};
 
     // Parcourir chaque élément du tableau
-    liste.forEach(item => {
+    jsonArray.forEach(item => {
         // Utiliser une clé unique, ici 'id', pour chaque objet
         jsonObject[item.id] = {
             nom: item.nom,
@@ -20,9 +13,3 @@ function transformerListeEnObjet(liste) {
 
     return jsonObject;
 }
-
-// Appel de la fonction pour transformer la liste en objet
-const jsonOutput = transformerListeEnObjet(jsonArray);
-
-// Affichage du résultat
-console.log(jsonOutput);
